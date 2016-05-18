@@ -14,5 +14,5 @@ app.get('/api/whoami',function(req,res){
     res.send(out);
 })
 app.listen(process.env.PORT || 3000, function(){
-  console.log("Chat server listening at "+(process.env.PORT || 3000));
+  console.log("Server listening at "+(process.env.PORT || 3000));
 });
