@@ -1,0 +1,23 @@
+{
+  "name": "rhp-micro-fcc",
+  "version": "1.0.0",
+  "description": "Free Code Camp Request header parser micro challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shabeebrp/rhp-micro-fcc.git"
+  },
+  "author": "shabeebrp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shabeebrp/rhp-micro-fcc/issues"
+  },
+  "homepage": "https://github.com/shabeebrp/rhp-micro-fcc#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
