@@ -5,9 +5,12 @@ app.get('/api/whoami',function(req,res){
         ipaddress:"s",
         language:"s",
         software:"s"};
-    out.ipaddress = req.connection.remoteAddress;
-    out.language = req.get('accept-Language');
-    out.software =req.get('user-agent');
+    out.ipaddress = req.headers['x-forwarded-for'] || 
+     req.connection.remoteAddress || 
+     req.socket.remoteAddress ||
+     req.connection.socket.remoteAddress;
+    out.language = req.get('accept-Language').substr(0,5);
+    out.software =req.get('user-agent').split('(')[1].split(")")[0];
     res.send(out);
 })
 app.listen(process.env.PORT || 3000, function(){
